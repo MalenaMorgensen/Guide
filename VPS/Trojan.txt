@@ -1,0 +1,28 @@
+一键脚本
+搭建Trojan服务，安装Trojan web管理面板，一键更改 Trojan-Panel 面板端口并设置伪装站点
+
+wget -N --no-check-certificate "https://raw.githubusercontent.com/V2RaySSR/Trojan_panel_web/master/trojan-web-panel.sh" && chmod +x trojan-web-panel.sh && ./trojan-web-panel.sh
+
+脚本的其他功能
+Usage:
+  trojan [flags]
+  trojan [command]
+
+Available Commands:
+  add         添加用户
+  completion  自动命令补全(支持bash和zsh)
+  del         删除用户
+  help        Help about any command
+  info        用户信息列表
+  log         查看trojan日志
+  restart     重启trojan
+  start       启动trojan
+  status      查看trojan状态
+  stop        停止trojan
+  tls         证书安装
+  update      更新trojan
+  version     显示版本号
+  web         以web方式启动
+
+Flags:
+  -h, --help   help for trojan

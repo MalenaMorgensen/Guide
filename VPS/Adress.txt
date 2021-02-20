@@ -1,0 +1,5 @@
+| http://www.morgensen.icu:8888 | http://www.morgensen.icu:19999 |
+| http://www.morgensen.icu/vnstat | http://www.morgensen.icu/speedtest |
+| http://www.morgensen.icu/flipclock | http://www.morgensen.icu/digitalclock |
+| http://www.morgensen.icu/solarsystem | http://www.morgensen.icu/birthday |
+| http://www.morgensen.icu/weather |

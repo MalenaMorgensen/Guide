@@ -1,0 +1,18 @@
+194.5.78.150
+www.morgensen.icu
+
+
+Congratulations, ShadowsocksR server install completed!
+Your Server IP        :  194.5.78.150 
+Your Server Port      :  15199 
+Your Password         :  0000000000 
+Your Protocol         :  auth_sha1_v4 
+Your obfs             :  tls1.2_ticket_auth 
+Your Encryption Method:  aes-256-cfb 
+
+
+Congratulations, Shadowsocks-libev server install completed!
+Your Server IP        :  194.5.78.150 
+Your Server Port      :  15199 
+Your Password         :  0000000000 
+Your Encryption Method:  aes-256-gcm 
