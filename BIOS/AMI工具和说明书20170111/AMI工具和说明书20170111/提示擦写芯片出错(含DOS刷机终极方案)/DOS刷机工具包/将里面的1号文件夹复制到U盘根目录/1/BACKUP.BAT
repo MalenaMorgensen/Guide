@@ -1,1 +1,0 @@
-AFUDOS bak.ROM /O

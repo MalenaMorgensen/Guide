@@ -1,4 +1,0 @@
-git clone https://github.com/*/*.git
-git add .
-git commit -m "Add files via upload"
-git push

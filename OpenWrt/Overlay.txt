@@ -1,4 +1,0 @@
-opkg update
-opkg install cfdisk
-opkg install e2fsprogs
-mkfs.ext4 /dev/sda3

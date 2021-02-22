@@ -1,8 +1,0 @@
-sudo apt-get update
-
-sudo apt-get install fcitx
-
-sudo apt-get install fcitx-pinyin
-
-sudo apt-get install fcitx-googlepinyin
-

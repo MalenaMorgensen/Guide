@@ -1,5 +1,0 @@
-sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
-firewall-cmd --zone= public --remove-port=80/tcp --permanent
-
-sudo firewall-cmd --reload
-firewall-cmd --list-all
