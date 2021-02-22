@@ -1,0 +1,93 @@
+wget https://buildlogs.centos.org/c7.1511.00/kernel/20151119220809/3.10.0-327.el7.x86_64/kernel-3.10.0-327.el7.x86_64.rpm
+yum install kernel-3.10.0-327.el7.x86_64.rpm -y
+uname -r
+reboot
+
+常规自动安装（推荐，自动检测内核）
+bash <(wget --no-check-certificate -qO-  https://git.io/lotServerInstall.sh) install
+指定内核安装
+bash <(wget --no-check-certificate -qO-  https://git.io/lotServerInstall.sh) install <Kernel Version>
+完全卸载
+bash <(wget --no-check-certificate -qO-  https://git.io/lotServerInstall.sh) uninstall
+
+启动命令 /appex/bin/lotServer.sh start
+停止加速 /appex/bin/lotServer.sh stop
+状态查询 /appex/bin/lotServer.sh status
+重新启动 /appex/bin/lotServer.sh restart
+
+1.更新许可证(有效期为6个月)
+wget -qO '/appex/etc/apx.lic' "https://api.moeclub.org/lotServer?ver=1&mac=00:00:00:00:00:00"
+使用 ifconfig 查看网卡 mac 地址，替换 00:00:00:00:00:00 (当内核版本号小于等于 3.11.20.10 时, 请设置
+ver=0)
+2.使用KeyGen, 更新许可证(lic文件)(有效期到2099年)
+git clone https://github.com/Tai7sy/LotServer_KeyGen
+cd LotServer_KeyGen
+php keygen.php 00:00:00:00:00:00 (使用 ifconfig 查看网卡 mac 地址，替换 00:00:00:00:00:00)
+cp out.lic /appex/etc/apx.lic
+状态查询 /appex/bin/lotServer.sh status
+3.CentOS7启动自动运行lotServer
+chmod +x /etc/rc.local
+vi /etc/rc.local
+添加su - root -c "/appex/bin/lotServer.sh start"
+
+
+wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh
+
+chattr -i /serverspeeder/etc/apx* && /serverspeeder/bin/serverSpeeder.sh uninstall -f
+
+
+
+
+wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh
+chmod +x shadowsocks-libev.sh
+./shadowsocks-libev.sh 2>&1 | tee shadowsocks-libev.log
+
+
+卸载方法：
+使用 root 用户登录，运行以下命令：
+
+./shadowsocks-libev.sh uninstall
+其他事项：
+客户端配置的参考链接：https://teddysun.com/339.html
+
+安装完成后即已后台启动 Shadowsocks-libev ，运行：
+
+/etc/init.d/shadowsocks status
+可以查看进程是否启动。
+本脚本安装完成后，会将 Shadowsocks-libev 加入开机自启动。
+
+使用命令：
+启动：/etc/init.d/shadowsocks start
+停止：/etc/init.d/shadowsocks stop
+重启：/etc/init.d/shadowsocks restart
+查看状态：/etc/init.d/shadowsocks status
+
+
+
+
+
+
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
+chmod +x shadowsocksR.sh
+./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
+
+yum -y install wget
+
+./shadowsocksR.sh uninstall
+
+/etc/init.d/shadowsocks status
+
+启动：/etc/init.d/shadowsocks start
+停止：/etc/init.d/shadowsocks stop
+重启：/etc/init.d/shadowsocks restart
+状态：/etc/init.d/shadowsocks status
+配置文件路径：/etc/shadowsocks.json
+日志文件路径：/var/log/shadowsocks.log
+代码安装目录：/usr/local/shadowsocks
+
+
+
+
+限制cpu
+wget https://github.com/fei5seven/lotServer/raw/master/cpulimit/cpu.sh
+bash cpu.sh
