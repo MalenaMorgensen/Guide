@@ -13,4 +13,4 @@ git init
 rm -rf .git
 
 git config core.ignorecase false
-
+git config --global core.ignorecase false
