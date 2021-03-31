@@ -1,4 +1,16 @@
 git clone https://github.com/*/*.git
+
 git add . OR git add --all OR git add -A
 git commit -m "Add files via upload"
 git push
+
+git pull
+
+git status
+
+git init
+
+rm -rf .git
+
+git config core.ignorecase false
+
