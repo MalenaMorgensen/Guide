@@ -39,7 +39,18 @@ sudo nano /etc/samba/smb.conf
    available = yes
 
 
-
+[Seagate Constellation HDD 8T RAID10]
+   comment = Seagate Constellation HDD 8T RAID10 folder
+   path = /home/desktop-l5420/Seagate Constellation HDD 8T RAID10
+   browseable = yes
+   writable = yes
+   read only = no
+   available = yes
+   public = yes
+   create mask = 0755
+   directory mask = 0755
+   valid users = desktop-l5420
+   write list = desktop-l5420
 
 
 
